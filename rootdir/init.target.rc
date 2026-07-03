@@ -115,6 +115,16 @@ on boot
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
 
+    write /dev/cpuset/background/cpus 4-7
+    write /dev/cpuset/system-background/cpus 4-7
+    write /dev/cpuset/foreground/boost/cpus 4-7
+    write /dev/cpuset/foreground/cpus 4-7
+    write /dev/cpuset/top-app/cpus 4-7
+    write /dev/cpuset/restricted/cpus 4-7
+    write /dev/cpuset/foreground_window/cpus 4-7
+    write /dev/cpuset/camera-daemon/cpus 4-7
+    write /dev/cpuset/audio-app/cpus 4-7
+
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
@@ -178,15 +188,6 @@ service vendor.sec_nvm /vendor/bin/sec_nvm
     class core
     user system
     group system
-
-service vendor.thermal-engine /vendor/bin/thermal-engine
-   class main
-   user root
-   socket thermal-send-client stream 0666 system system
-   socket thermal-recv-client stream 0660 system system
-   socket thermal-recv-passive-client stream 0666 system system
-   socket thermal-send-rule stream 0660 system system
-   group root system oem_2929 oem_2993
 
 
 service vendor.lowi /vendor/bin/sscrpcd

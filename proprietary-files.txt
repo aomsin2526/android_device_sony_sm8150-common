@@ -1836,8 +1836,6 @@ vendor/etc/init/taimport_vendor.rc
 vendor/bin/taimport_vendor
 
 # Thermal engine
-vendor/bin/thermal-engine
-vendor/etc/init/init_thermal-engine.rc
 vendor/lib64/hw/thermal.somc.so
 vendor/lib64/liblights-core.so
 vendor/lib64/libsomc_thermal.so

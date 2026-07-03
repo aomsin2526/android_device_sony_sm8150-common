@@ -64,6 +64,8 @@ TARGET_KERNEL_CONFIG := \
     vendor/sony-kumano.config
 TARGET_KERNEL_SOURCE := kernel/sony/sm8150
 
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(COMMON_PATH)/modules.blocklist
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))

@@ -354,8 +354,8 @@ on post-fs-data
     chown system audio /dev/sony_hweffect_params
     chmod 0660 /dev/sony_hweffect_params
 
-on property:ro.boot.verifiedbootstate=orange
-    setprop persist.sys.usb.config adb
+#on property:ro.boot.verifiedbootstate=orange
+#    setprop persist.sys.usb.config adb
 
 # Charge service
 service charge_service /vendor/bin/charge_service

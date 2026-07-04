@@ -122,7 +122,7 @@ on boot
     write /dev/cpuset/top-app/cpus 4-7
     write /dev/cpuset/restricted/cpus 4-7
     write /dev/cpuset/foreground_window/cpus 4-7
-    write /dev/cpuset/camera-daemon/cpus 4-7
+    write /dev/cpuset/camera-daemon/cpus 0-3
     write /dev/cpuset/audio-app/cpus 4-7
 
 #USB controller configuration
